@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>活动图--编辑</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/form.css">
+
+    </head>
+    <body>
+        <div>
+            <form method="post" action="__URL__/update" name="form" enctype="multipart/form-data">
+                <table>
+                    <volist name="result" id="vo" >
+                        <input type="hidden" name="upid" value="{$vo.id}">
+                        <tr>
+                            <td >标题：</td>
+                            <td ><input type="text" name="title" value="{$vo.title}"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td >活动图片：</td>
+                            <td ><input type="file" name="address" >{$vo.address}</td>
+                        </tr>
+
+                        <tr>
+                            <td >&nbsp;</td>
+                            <td>
+                                <img src="__ROOT__/Uploads/Pic/{$vo.address}" style="width: 50px;height: 60px;">
+                            </td>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>链接地址：</td>
+                            <td><input type="text" name="site" value="{$vo.site}"></td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td colspan="2" style="text-align: center">
+                                <input type="submit" name="submit" value="提交" style="padding: 5px;font-size: 18px;border: 1px;border-radius: 10px;" class="radius" onclick="return doSubmit()">
+                            </td>
+                        </tr>
+
+                    </volist>
+                </table>
+            </form>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>无标题文档</title>
+        <style type="text/css">
+            *{margin:0; padding:0}
+            #nav{width:200px; margin:10px}
+            #nav h3{ 
+                cursor:pointer; 
+                line-height:30px; 
+                height:30px; 
+                background-color:#00AAFF; 
+                color:#fff;
+            }
+            #nav a{
+                padding: 6px;
+                display:block; 
+                line-height:24px;
+                color:#666666
+            }
+            #nav a:hover{
+                background-color:#eee; 
+                color:#000;
+            }
+            #nav div{
+                display:none; 
+                border:1px solid #000; 
+                border-top:none
+            }
+        </style>
+        <script type="text/javascript">
+            function $(id) {
+                return document.getElementById(id)
+            }
+            window.onload = function() {
+                $("nav").onclick = function(e) {
+                    var src = e ? e.target : event.srcElement;
+                    if (src.tagName == "H3") {
+                        var next = src.nextElementSibling || src.nextSibling;
+                        next.style.display = (next.style.display == "block") ? "none" : "block";
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav">
+            <h3>管理曲</h3>
+            <div>
+                <a href="#">111</a>
+                <a href="#">222</a>
+                <a href="#">333</a>
+            </div>
+            <h3>交流区</h3>
+            <div>
+                <a href="#">aaa</a>
+                <a href="#">bbb</a>
+                <a href="#">ccc</a>
+            </div>
+        </div>
+    </body>
+</html>

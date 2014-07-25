@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>新青年公益社--成员的详细信息</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/public.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/main.css"/>
+    </head>
+    <body>
+        <!--              页头：导航栏                               -->
+    <include file="Index:header"/>
+
+    <!---                本届成员具体内容                                    -->
+    <div class="main">
+        <volist name="mem" id="vo" empty="暂时没有数据">
+            <div class="content_pro">
+                <h1>{$vo.title}</h1>
+                <br>
+                发布者：{$vo.author}   发布时间：{$vo.time}
+            </div>
+            <br>
+            <div class="cy">
+                {$vo.content}
+            </div>
+
+        </volist>
+
+        <hr>
+        <!--  上下篇  -->
+        <div  style="margin-top: 6px;">
+            <volist name="up" id="up">
+                上一篇： <a href="__URL__/contentMem/id/{$up.id}" title="{$up.title}">
+                    {$up.title|utf8Substr=0,32}
+                </a>  <br>
+            </volist>
+            <volist name="next" id="next">
+                下一篇： <a href="__URL__/contentMem/id/{$next.id}" title="{$next.title}">
+                    {$next.title|utf8Substr=0,50}
+                </a>  
+            </volist>
+
+        </div>
+
+    </div>
+
+    <!--                页尾                                         -->
+    <include file="Index:footer"/>
+</body>
+</html>

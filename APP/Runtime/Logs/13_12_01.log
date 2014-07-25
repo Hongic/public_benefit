@@ -1,0 +1,41 @@
+[ 2013-12-01T16:49:24+08:00 ] 127.0.0.1 /public_benefit/
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:50:33+08:00 ] 127.0.0.1 /public_benefit/
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:51:01+08:00 ] 127.0.0.1 /public_benefit/
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:51:26+08:00 ] 127.0.0.1 /public_benefit/
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:52:24+08:00 ] 127.0.0.1 /public_benefit/
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:52:34+08:00 ] 127.0.0.1 /public_benefit/index.php
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:52:48+08:00 ] 127.0.0.1 /public_benefit/index.php/Hone/Index/index
+ERR: 鏃犳硶鍔犺浇妯″潡:Hone
+
+[ 2013-12-01T16:53:09+08:00 ] 127.0.0.1 /public_benefit/index.php/Index/index
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:53:13+08:00 ] 127.0.0.1 /public_benefit/index.php
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2013-12-01T16:53:49+08:00 ] 127.0.0.1 /public_benefit/Public/CSS/pro_drop_1.css
+ERR: 闈炴硶鎿嶄綔:CSS
+
+[ 2013-12-01T16:53:50+08:00 ] 127.0.0.1 /public_benefit/Public/JS/stuHover.js
+ERR: 闈炴硶鎿嶄綔:JS
+

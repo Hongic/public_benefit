@@ -1,0 +1,34 @@
+<!---                新闻动态                                  --->
+<div class="main">
+
+    <!--    左边：新闻时间列表      id desc      -->
+    <div class="activity_left">
+        <h2>最新动态</h2>
+        <volist name="result" id="new">
+            <span style="float: left"> 
+                <a href="__URL__/content/id/{$new.id}" title="{$new.title}">{$new.title|utf8Substr=0,32}</a>  
+            </span>
+            <span style="float: right;padding-right: 3px;">
+                -------- {$new.time|substr=0,10}
+            </span>
+            <br>
+        </volist>
+        <div class="page">{$page}</div>
+    </div>
+
+    <!--    右边：阅读点击榜        click desc      -->
+    <div class="activity_right">
+        <span style="float: left;padding: 3px; background-color: #68f2eb;;width: 100%;" ><h2>阅读榜</h2></span>
+
+        <br>
+        <div class="rank">
+            <volist name="news" id="new">
+                <span> 
+                    <a href="__URL__/content/id/{$new.id}" title="{$new.title}">{$new.title|utf8Substr=0,18}</a>  
+                </span>
+                <br>
+            </volist>
+        </div>
+    </div>
+
+</div>

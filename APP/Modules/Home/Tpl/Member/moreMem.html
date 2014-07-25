@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>新青年公益社--成员more</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/public.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/main.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/table.css"/>
+    </head>
+    <body>
+        <!--              页头：导航栏                               -->
+    <include file="Index:header"/>
+
+    <!---                本届成员具体内容                                    -->
+    <div class="main">
+
+        <volist name="result" id="vo">
+            <div class="memList">
+                <div>
+                    <font style="font-size: 26px;">{$vo.title}</font>
+                    <a href="__URL__/contentMem/id/{$vo.id}">
+                        详情...
+                    </a>
+                </div>
+                <div class="memList_right">
+                    {$vo.content|utf8Substr=0,345}
+                </div>
+
+            </div>
+
+            <br>
+        </volist>
+        <div class="page" style="clear: both">
+            {$page}
+        </div>
+        <br>
+    </div>
+
+    <!--                页尾                                         -->
+    <include file="Index:footer"/>
+</body>
+</html>

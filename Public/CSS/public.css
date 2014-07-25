@@ -1,0 +1,111 @@
+
+/* 
+    Created on : 2013-10-24, 15:53:00
+    Author     : Hong
+*/
+
+/*
+ * 全局背景 body
+*/
+
+
+*{
+    margin: 0 auto;
+    padding: 0px;
+
+} 
+
+/*
+ *  中间 
+ */
+.center{
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+/*
+ * 头尾背景
+ */
+
+.hdf{
+    background-color: #68f2eb;
+    width: 100%;
+
+}
+
+/*
+ *页头 header
+*/
+.header{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 3px;
+    height: 60px;  // 不要轻易改变
+    border: 1px #f007d3 dashed;
+    vertical-align: middle;
+
+}
+
+/*
+ * 导航栏 nav
+ */
+
+.navigation{
+    font-family:Arial, Helvetica, sans-serif;
+    width:900px;
+    margin:0 auto;
+}
+.navigation ul{ 
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+.navigation ul li{ 
+    float:left;
+    vertical-align: middle;
+}
+.navigation li a{
+    display:block;
+    padding:10px 12px;
+    text-decoration:none;
+    border:0px solid #711515;
+    margin:10px 13px;
+    vertical-align: middle;
+}
+.navigation li a:link,.navigation li a:visited{
+    color:#000;  // 字体颜色
+    background-color:#65f6f8;   // 背景颜色
+} 
+.navigation li a:hover{
+    color:#ffff00;
+    background-color:#990020;
+     border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+
+/*
+ *  页尾 footer
+*/
+.fo{
+    background-color: #68f2eb;
+    width: 100%;
+}
+.foot{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 3px;
+    height: 200px;
+}
+.foote{
+    width: 323px;
+    height: 200px;
+    float: left;
+    margin: 5px;
+}
+.foote a{
+    text-decoration: none;
+    line-height: 25px;
+}

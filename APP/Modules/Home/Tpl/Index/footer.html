@@ -1,0 +1,44 @@
+
+<!--   页尾：版权、校内、投资公司   -->
+<div class="fo">
+
+    <!--   版权      -->
+    <div class="foot">
+        <div class="foote">
+            版权信息  
+            <hr>
+            <volist name="copyRight" id="vo">
+                {$vo.content}
+            </volist>
+            <div style="text-align: center;">
+                <a href="__ROOT__/Admin/Index/index">
+                    管理
+                </a>
+            </div>
+        </div>
+
+        <!--   校内      -->
+        <div class="foote">
+            校内链接 
+            <hr>
+            <volist name="school" id="vo">
+                <span style="width:158px;display: block;float: left;border:"> 
+                    <a href="{$vo.address}" target="_blank" title="{$vo.name}">{$vo.name|utf8Substr=0,9}</a>
+                </span>
+            </volist>
+
+        </div>
+
+        <!--   投资公司      -->
+        <div class="foote">
+            公益  
+            <hr>
+            <volist name="company" id="vo">
+                <span style="width:158px;display: block;float: left;"> 
+                    <a href="{$vo.addr}" target="_blank" title="{$vo.company}">{$vo.company|utf8Substr=0,9}</a>
+                </span>
+            </volist>
+        </div>
+    </div>
+
+</div>

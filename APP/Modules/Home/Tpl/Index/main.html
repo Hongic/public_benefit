@@ -1,0 +1,115 @@
+<div class="main">
+
+    <!--                    LOGO  1000x200                                           -->
+    <div style="height: 300px;width: 1000px;">
+        <img src="__PUBLIC__/Images/logo.jpg" class="main_img">
+    </div>
+
+    <!--                            站内公告                                 -->
+    <div style="color: red;font-size: 20px;font-weight: bolder;">
+        <marquee>
+            <p>{$notice}</p>
+        </marquee>
+    </div>
+
+    <!--                    本届会长、最新公益、新闻动态                     -->
+    <div>
+
+        <!--               本届会长：左 （图文混合）                         -->
+        
+
+        <!--                   最新公益：中 （纯文字）                       -->
+        <div class="first">
+            <!--  背景是图片    -->
+            <div style="background-color: #68f2eb;width: 483px;; font-size: 20px;padding-left: 6px;">
+                最新公益
+            </div>
+            <volist name="act" id="vo">
+                <span style="float: left;padding-left: 3px;"> 
+                    <a href="__GROUP__/Activity/content/id/{$vo.id}" title="{$vo.title}">
+                        {$vo.title|utf8Substr=0,14}
+                    </a>  
+                </span>
+                <span style="float: right;padding-right: 3px;">
+                    {$vo.time|substr=0,10}
+                </span>
+                <br>
+            </volist>
+        </div>
+
+        <!--               新闻动态：右 （纯文字）                           -->
+        <div class="first">
+            <!--  背景是图片    -->
+            <div style="background-color: #68f2eb;width: 483px;; font-size: 20px;padding-left: 6px;">
+                新闻动态
+            </div>
+
+            <volist name="new" id="vo">
+                <span style="float: left;padding-left: 3px;"> 
+                    <a href="__GROUP__/News/content/id/{$vo.id}" title="{$vo.title}">
+                        {$vo.title|utf8Substr=0,14}
+                    </a>  
+                </span>
+                <span style="float: right;padding-right: 3px;">
+                    {$vo.time|substr=0,10}
+                </span>
+                <br>
+            </volist>
+
+        </div>
+    </div>
+
+    <!--                     活动图  左滚动                                  -->
+    <div class="pic">
+        <!--  背景是图片    -->
+        <div style="width: 997px;height: 27px; background-color: #68f2eb; font-size: 25px;vertical-align: middle;padding-top: 5px;">
+            活动图
+        </div>
+        <div id="demo">
+            <div id="indemo">
+                <div id="demo1">
+                    <volist name="pic" id="pic">
+                        <div class="two">
+                            <a href="{$pic.site}"  target="_blank">
+                                <img src="__ROOT__/Uploads/Pic/{$pic.address}" border="0"><br>
+                                {$pic.title}
+                            </a>
+                        </div>
+                    </volist>
+
+                </div>
+                <div id="demo2"> </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        var speed = 10;
+        var tab = document.getElementById("demo");
+        var tab1 = document.getElementById("demo1");
+        var tab2 = document.getElementById("demo2");
+        tab2.innerHTML = tab1.innerHTML;
+        function Marquee() {
+            if (tab2.offsetWidth - tab.scrollLeft <= 0)
+                tab.scrollLeft -= tab1.offsetWidth
+            else {
+                tab.scrollLeft++;
+            }
+        }
+        var MyMar = setInterval(Marquee, speed);
+        tab.onmouseover = function() {
+            clearInterval(MyMar)
+        };
+        tab.onmouseout = function() {
+            MyMar = setInterval(Marquee, speed)
+        };
+
+    </script>
+
+
+
+</div>

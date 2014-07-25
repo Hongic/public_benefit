@@ -1,0 +1,38 @@
+<!---                公益投资                                   --->
+<div class="main">
+
+    <!--    左边：投资时间列表      desc      -->
+    <div class="activity_left">
+        <h2>最新公益</h2>
+        <volist name="result" id="inve">
+            <span style="float: left;"> 
+                <a href="__URL__/content/id/{$inve.id}" title="{$inve.title}">{$inve.title|utf8Substr=0,32}</a>  
+            </span>
+            <span style="float: right;">
+                -------- {$inve.time|substr=0,10}
+            </span>
+            <br>
+        </volist>
+        <div class="page">{$page}</div>
+    </div>
+
+    <!--    右边：阅读点击榜        desc      -->
+    <div class="activity_right">
+        <span style="float: left;padding: 3px;background-color: #68f2eb;;width: 100%;">
+            <h2>公益榜</h2>
+        </span>
+
+        <br> 
+        <div class="rank">
+            <volist name="investor" id="inv" key="k">
+                【{$k}】
+                <a href="__URL__/content/id/{$inv.id}" title="{$inv.title}">
+                    {$inv.title|utf8Substr=0,17}
+                </a>  
+
+                <br>
+            </volist>
+        </div>
+    </div>
+
+</div>

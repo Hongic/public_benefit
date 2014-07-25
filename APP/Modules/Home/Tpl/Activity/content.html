@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>新青年公益社--公益活动</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/public.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/CSS/main.css"/>
+    </head>
+    <body>
+        <!--              页头：导航栏                               -->
+    <include file="Index:header"/>
+
+    <!---                公益活动具体内容                                    -->
+    <div class="main">
+
+        <!--    左边：详细内容     -->
+        <div class="activity_left">
+            <div style="min-height:450px;">
+                <br>
+                <volist name="res" id="vo">
+                    <div class="content_c">
+                        <h2>{$vo.title} </h2>
+                        <br>
+                        发布者：{$vo.author} 时间：{$vo.time} 点击量：{$vo.click}
+                    </div>
+                    <br>
+                    <div>
+                        {$vo.content}
+                    </div>
+                </volist>
+            </div>
+
+            
+            
+            <!--  上下篇  -->
+            <div  style="margin-top: 6px;">
+                <volist name="up" id="up">
+                    上一篇： <a href="__URL__/content/id/{$up.id}" title="{$up.title}">
+                        {$up.title|utf8Substr=0,32}
+                    </a>  <br>
+                </volist>
+                <volist name="next" id="next">
+                    下一篇： <a href="__URL__/content/id/{$next.id}" title="{$next.title}">
+                        {$next.title|utf8Substr=0,50}
+                    </a>  
+                </volist>
+
+            </div>
+
+
+
+        </div>
+
+        <!--    右边：阅读点击榜        desc      -->
+        <div class="activity_right">
+            <span style="float: left;padding: 3px;background-color: #68f2eb;;width: 100%;"><h2>阅读榜</h2></span>
+            <br> 
+            <div class="rank">
+                <volist name="activity" id="vo" key="k">
+                    【{$k}】
+                    <a href="__URL__/content/id/{$vo.id}" title="{$vo.title}">
+                        {$vo.title|utf8Substr=0,15}
+                    </a>
+                    <br>
+                </volist>
+            </div>
+        </div>
+
+    </div>
+
+    <!--                页尾                                         -->
+    <include file="Index:footer"/>
+</body>
+</html>
